@@ -1,0 +1,35 @@
+.isHidden{
+    display: none;
+}
+.isVisible{
+    display: initial;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    min-height: 100px;
+    min-width: 300px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    -webkit-box-shadow: 2px -3px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px -3px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px -3px 30px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+.isVisible .isHidden > label{
+    display: flex;
+}
+
+input{
+    display: block;
+    
+}
+
+.container_buttons {
+    display: inline;
+
+}
+.container_buttons  > button {
+    margin: 2%;
+}
