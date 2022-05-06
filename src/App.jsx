@@ -1,10 +1,13 @@
 import './App.css';
 import React from 'react';
-import Listado from './components/listado/listado';
+import Box from './components/box-element/box';
 
 function App() {
   return (
-    <Listado />
+    <div>
+
+      <Box />
+    </div>
   );
 }
 
