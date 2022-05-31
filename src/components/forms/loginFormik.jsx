@@ -5,6 +5,7 @@
 /* eslint-disable no-promise-executor-return */
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
 const loginSchema = Yup.object().shape(
@@ -14,6 +15,7 @@ const loginSchema = Yup.object().shape(
   },
 );
 export default function LoginFormik() {
+  const navigate = useNavigate();
   const initialCredentials = {
     email: '',
     password: '',
@@ -28,7 +30,8 @@ export default function LoginFormik() {
         validationSchema={loginSchema}
         onSubmit={async (values) => {
           await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          localStorage.setItem('credentials', JSON.stringify(values));
+          navigate('/perfil', { replace: true });
         }}
       >
         { (props) => {
