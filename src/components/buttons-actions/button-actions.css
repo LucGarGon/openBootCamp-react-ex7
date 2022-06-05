@@ -1,0 +1,11 @@
+.buttons-container {
+ width: 50%;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;   
+}
+.buttons-container_child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -4,6 +4,7 @@ import {
   Route, Routes,
 } from 'react-router-dom';
 import AuthRouth from '../../routes/auth-routh';
+import ChuckJokes from '../chuck-jokes/chuck-jokes';
 import Loginpage from '../login/loginpage';
 import Perfil from '../perfil/perfil';
 
@@ -20,6 +21,10 @@ export default function HomepageRouter() {
       <Route
         path="/login"
         element={<Loginpage />}
+      />
+      <Route
+        path="/chuckjokes"
+        element={<ChuckJokes />}
       />
       <Route
         path="/perfil"

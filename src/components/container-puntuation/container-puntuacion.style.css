@@ -1,0 +1,15 @@
+.container_puntuation{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: -2px 5px 8px 5px rgba(0,0,0,0.26);    ;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10%;
+}
+.container_puntuation > p {
+    color: blue
+}

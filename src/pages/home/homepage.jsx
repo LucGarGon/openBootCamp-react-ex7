@@ -1,13 +1,36 @@
+import AppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HomepageRouter from './homepage-router';
+import './homePageStyles.css';
 
+const styleContainer = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+};
+const styleTool = {
+  display: 'flex',
+  justifyContent: 'space-around',
+};
+const styleBar = {
+  marginBottom: '2%',
+};
 export default function Homepage() {
   return (
-    <>
-      <p><Link to="login">login</Link></p>
-      <p><Link to="perfil">mi perfil</Link></p>
+    <Container style={styleContainer}>
+      <AppBar position="static" style={styleBar}>
+        <Toolbar style={styleTool}>
+          <p><Link to="login">login</Link></p>
+          <p><Link to="perfil">mi perfil</Link></p>
+          <p><Link to="chuckjokes">chuck jokes</Link></p>
+        </Toolbar>
+      </AppBar>
       <HomepageRouter />
-    </>
+    </Container>
+
   );
 }
