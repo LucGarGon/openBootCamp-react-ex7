@@ -5,20 +5,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomepageRouter from './homepage-router';
 import './homePageStyles.css';
+import { styleContainer, styleTool, styleBar } from './homepage.styles';
 
-const styleContainer = {
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
-const styleTool = {
-  display: 'flex',
-  justifyContent: 'space-around',
-};
-const styleBar = {
-  marginBottom: '2%',
-};
 export default function Homepage() {
   return (
     <Container style={styleContainer}>

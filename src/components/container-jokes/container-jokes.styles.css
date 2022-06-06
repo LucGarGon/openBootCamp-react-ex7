@@ -1,0 +1,11 @@
+.container_jokes{
+    min-width: 400px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: -2px 5px 8px 5px rgba(0,0,0,0.26);    ;
+    border-radius: 2%;
+    
+}
