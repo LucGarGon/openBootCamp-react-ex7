@@ -1,4 +1,5 @@
 import React from 'react';
+import FilterContainer from './filter-container';
 
 export default function FilterOptions() {
   return (

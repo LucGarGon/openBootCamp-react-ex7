@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 
 export default function Filter({ active, onClick, children }) {
@@ -6,7 +7,6 @@ export default function Filter({ active, onClick, children }) {
   }
   return (
     <button
-      type="button"
       className="filter"
       onClick={(e) => {
         e.preventDefault();
