@@ -1,27 +1,34 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-undef */
+/* eslint-disable arrow-body-style */
 import { ADD_TODO, SET_VISIBILITY, TOOGLE_TODO } from '../constants';
 
-let nextTodoId = 0;
+let nextTodoID = 0;
 
-const addTodo = (text) => ({
-  type: ADD_TODO,
-  payload: {
-    // eslint-disable-next-line no-plusplus
-    id: nextTodoId++,
-    text,
-  },
-});
+export const addTodo = (text) => {
+  return {
+    type: ADD_TODO,
+    payload: {
+      id: nextTodoID++,
+      text,
+    },
+  };
+};
 
-const toogleTodo = (id) => ({
-  type: TOOGLE_TODO,
-  payload: {
-    id,
-  },
-});
+export const toggleTodo = (id) => {
+  return {
+    type: TOOGLE_TODO,
+    payload: {
+      id,
+    },
+  };
+};
 
-const setVisibilityFilter = (filter) => ({
-  type: SET_VISIBILITY,
-  payload: {
-    filter,
-  },
-});
-export default { addTodo, toogleTodo, setVisibilityFilter };
+export const setVisibilityFilter = (filter) => {
+  return {
+    type: SET_VISIBILITY,
+    payload: {
+      filter,
+    },
+  };
+};

@@ -1,3 +1,6 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable array-callback-return */
 /* eslint-disable react/prop-types */
@@ -9,15 +12,15 @@ export default function TodoList({ todos, onTodoClick }) {
     <div>
       <h1>Todos</h1>
       <ul>
-        {todos.map((todo) => {
+        {todos.map((todo, index) => (
           <Todo
-            key={todo.id}
-            {...todo}
+            key={index}
+            {...todo} // id, text, completed
             onClick={
-                () => onTodoClick(todo.id)
-            }
-          />;
-        })}
+                  () => onTodoClick(todo.id)
+              }
+          />
+        ))}
       </ul>
     </div>
   );

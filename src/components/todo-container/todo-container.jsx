@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import toogleTodo from '../../store/actions/action';
+import { toggleTodo } from '../../store/actions/action';
 import { SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED } from '../../store/constants';
 import TodoList from './todo-list';
 
@@ -17,15 +17,15 @@ const filterTodos = (todos, filter) => {
 };
 
 const mapStateToProps = (state) => ({
-  todos: filterTodos(state.todosState, state.filterState),
+  todos: filterTodos(state.todos, state.filterState),
 });
 
 const mapDispatchToProps = (dispatch) => ({
 
   onTodoClick: (id) => {
-    dispatch(toogleTodo(id));
+    dispatch(toggleTodo(id));
   },
 
 });
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+const con = connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default con;

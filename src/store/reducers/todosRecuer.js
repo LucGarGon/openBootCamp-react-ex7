@@ -1,3 +1,5 @@
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable implicit-arrow-linebreak */
 import { ADD_TODO, TOOGLE_TODO } from '../constants';
 
 const initialState = [];
@@ -16,15 +18,13 @@ const todosReducer = (state = initialState, action) => {
       ];
     case TOOGLE_TODO:
       // eslint-disable-next-line array-callback-return
-      return state.map((todo) => {
+      return state.map((todo) =>
         // eslint-disable-next-line no-unused-expressions
-        (todo.id === action.payload.id)
-          ? {
-            ...todo,
-            completed: !todo.completed,
-          }
-          : todo;
-      });
+        (todo.id === action.payload.id) ? {
+          ...todo,
+          completed: !todo.completed,
+        }
+          : todo);
     default:
       return state;
   }

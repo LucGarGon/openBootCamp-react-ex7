@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import HomepageRouter from './homepage-router';
 import './homePageStyles.css';
 import { styleContainer, styleTool, styleBar } from './homepage.styles';
+import TodoContainer from '../../components/todo-container/todo-container';
 
 export default function Homepage() {
   return (
@@ -17,6 +18,7 @@ export default function Homepage() {
           <p><Link to="chuckjokes">chuck jokes</Link></p>
         </Toolbar>
       </AppBar>
+      <TodoContainer />
       <HomepageRouter />
     </Container>
 
