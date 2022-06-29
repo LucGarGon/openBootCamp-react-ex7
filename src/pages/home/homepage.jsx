@@ -7,6 +7,7 @@ import HomepageRouter from './homepage-router';
 import './homePageStyles.css';
 import { styleContainer, styleTool, styleBar } from './homepage.styles';
 import TodoContainer from '../../components/todo-container/todo-container';
+import TodoFormContainer from '../../components/todo-container/forms/TodoFormContainer';
 
 export default function Homepage() {
   return (
@@ -19,6 +20,7 @@ export default function Homepage() {
         </Toolbar>
       </AppBar>
       <TodoContainer />
+      <TodoFormContainer />
       <HomepageRouter />
     </Container>
 
