@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable no-use-before-define */
 import { takeLatest, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import { API_CALL_REQUEST } from '../actions/asyncActions';

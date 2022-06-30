@@ -5,12 +5,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import createAppStore from './store/config/storeConfig';
+import { createAppAsyncStore } from './store/config/storeConfig';
 
-const store = createAppStore();
+// const store = createAppStore();
+const asyncStore = createAppAsyncStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
+  <Provider store={asyncStore}>
     <BrowserRouter>
       <React.StrictMode>
         <App />
