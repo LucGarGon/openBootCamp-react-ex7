@@ -22,9 +22,12 @@ export function httpRequest(method, url, data) {
   return {
     type: API_CALL_REQUEST,
     payload: {
-      method,
-      url,
-      data,
+      request: {
+        method,
+        url,
+        data,
+      },
+
       okAction: API_CALL_SUCCESS,
       failAction: API_CALL_FAILURE,
     },

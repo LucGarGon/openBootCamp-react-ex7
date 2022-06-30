@@ -14,7 +14,7 @@ const loginSchema = Yup.object().shape(
     password: Yup.string().required('Password is required'),
   },
 );
-export default function LoginFormik() {
+export default function LoginFormik({ loged, fetching, onLogin }) {
   const navigate = useNavigate();
   const initialCredentials = {
     email: '',
@@ -29,9 +29,10 @@ export default function LoginFormik() {
         }
         validationSchema={loginSchema}
         onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          localStorage.setItem('credentials', JSON.stringify(values));
-          navigate('/perfil', { replace: true });
+          // await new Promise((r) => setTimeout(r, 500));
+          // localStorage.setItem('credentials', JSON.stringify(values));
+          // navigate('/perfil', { replace: true });
+          onLogin(values.email, values.password);
         }}
       >
         { (props) => {
@@ -69,6 +70,7 @@ export default function LoginFormik() {
                   )
               }
               <button type="submit">Login</button>
+              { fetching ? (<p>LOADING...</p>) : null}
             </Form>
           );
         }}
